@@ -24,7 +24,7 @@ const Header = ({ currentMood, moodData }) => {
               {moodData.message}`
             </>
           )
-          : "Seleziona il tuo umore e lascia che il sito si adatti a te"}
+          : "Seleziona il colore che più si addice a questa giornata"}
       </p>
     </header>
   )

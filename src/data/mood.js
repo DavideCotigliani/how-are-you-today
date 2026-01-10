@@ -24,7 +24,7 @@ const moods = {
         activity: "Prova una nuova attività creativa"
     },
     angry: {
-        label: "Arrabbiato",
+        label: "Arrabbiato 😡",
         color: "#e6131dff",
         message: "È il momento di calmarsi 🎨",
         activity: "Prova a rilassarti"

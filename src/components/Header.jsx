@@ -10,15 +10,20 @@ const Header = ({ currentMood, moodData }) => {
         background,
         padding: "3rem",
         textAlign: "center",
-        color: "#4398ddff",
+        color: "#151718ff",
         transition: "0.5s",
         borderRadius: "0 0 1rem 1rem",
       }}
     >
-      <h1 style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>What's the mood today?</h1>
+      <h1 style={{ fontSize: "3rem", marginBottom: "0.5rem", }}>What's the mood today?</h1>
       <p style={{ fontSize: "1.2rem", opacity: 0.9 }}>
-        {currentMood         //se c'è un umore selezionato, lo mostra
-          ? `Oggi ti senti ${moodData.label}`
+        {currentMood       //se c'è un umore selezionato, lo mostra
+          ? (
+            <>
+              Oggi ti senti {moodData.label} <br />
+              {moodData.message}`
+            </>
+          )
           : "Seleziona il tuo umore e lascia che il sito si adatti a te"}
       </p>
     </header>

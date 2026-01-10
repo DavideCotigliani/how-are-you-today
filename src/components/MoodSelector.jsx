@@ -20,7 +20,6 @@ const MoodSelector = ({ setMood }) => {
             transition: "0.3s"
           }}
         >
-          {moods[key].label}
               </button>
                ))}
           </div>

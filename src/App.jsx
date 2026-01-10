@@ -5,13 +5,15 @@ import { useState } from "react";
 function App() {
   const [currentMood, setCurrentMood] = useState(null);
   return (
-    <>
+    <div className="app">
       <Header
   currentMood={currentMood}
   moodData={currentMood ? moods[currentMood] : null}
 />
       <MoodSelector setMood={ setCurrentMood} />
-    </>
+
+    </div>
+    
   )
 }
 

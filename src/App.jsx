@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import MoodSelector from "./components/MoodSelector";
 import moods from "./data/mood";
 import { useState } from "react";
@@ -11,7 +12,7 @@ function App() {
   moodData={currentMood ? moods[currentMood] : null}
 />
       <MoodSelector setMood={ setCurrentMood} />
-
+      <Footer/>
     </div>
     
   )

@@ -1,24 +1,32 @@
 import React from 'react'
-import { Col, Container, Row, Form, FormSelect } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap'
+
 const Footer = () => {
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("it-IT", {
+        day: "numeric",
+    month: "long",
+    year: "numeric",
+    })
+    const hour = today.getHours();
+    const timeOfDay = hour < 12 ? "Mattina ☀️" : hour < 18 ? "Pomeriggio 🌤️" : "Sera 🌙";
   return (
-      <div>
-          <footer className='footer mt-3 pt-3'>
-              <Container fluid className='px-5'>
-                  <Row className="mb-4">
-                       <Col md={4} className="mb-3">
-            <p>
-              <h3>Scopri l'umore di oggi.</h3>
+    <footer className="mt-4 py-4 bg-secondary border-top">
+      <Container>
+        <Row className="text-center">
+          <Col>
+         <h5 className="mb-2">Oggi {formattedDate} • {timeOfDay}</h5>
+            <p className="mb-1 text-muted">
+              Scopri come ti senti oggi
             </p>
-            <p>Powered by Davide Cotigliani</p>
+            <small className="text-secondary">
+              Powered by Davide Cotigliani
+            </small>
           </Col>
-                  </Row>
-              </Container>
-              
-          </footer>
-    </div>
+        </Row>
+      </Container>
+    </footer>
   )
 }
 
 export default Footer
-
